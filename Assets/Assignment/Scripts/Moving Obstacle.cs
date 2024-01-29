@@ -17,8 +17,13 @@ public class MovingObstacle : MonoBehaviour
         transform.Translate(direction * Time.deltaTime, 0, 0);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         direction = direction * -1;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(collision.collider.gameObject);
     }
 }
