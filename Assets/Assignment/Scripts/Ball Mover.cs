@@ -10,16 +10,14 @@ public class BallMover : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody.AddRelativeForce(rigidbody.position * force * Time.deltaTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    private void FixedUpdate()
-    {
-        rigidbody.AddForce(rigidbody.position * force * Time.deltaTime);
-    }
+
 }
