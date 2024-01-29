@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallMover : MonoBehaviour
 {
-    public float force = 15f;
+    public float force = 10000f;
     Rigidbody2D rigidbody;
     // Start is called before the first frame update
     void Start()
